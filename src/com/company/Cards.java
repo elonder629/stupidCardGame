@@ -21,7 +21,9 @@ public class Cards {
 				} else if(cards_player[index] == cards_dealer[index]) {
 					playerSum += 5;
 				}
+				index++;
 			}
+			solution.add(index);
 		}
 
 
