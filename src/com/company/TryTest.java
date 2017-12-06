@@ -1,3 +1,5 @@
+package com.company;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -44,7 +46,6 @@ public class TryTest  {
             String logName = testName + ".log";
             PrintStream flog = new PrintStream(new FileOutputStream(new File(logName)));
             System.setOut(new PrintStream(flog));
-
             Cards.main(null);
 
             return fileData(logName);

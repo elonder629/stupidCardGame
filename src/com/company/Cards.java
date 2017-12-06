@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -9,7 +11,21 @@ public class Cards {
 		 * Your code should return the answer, i.e., the points at which the player should stop, in the "solution" arraylist.
 		 * The return value should be the total winnings for the best solution.
 		 */
-		return 0;
+		int index = 0;
+		int numberToTake = 1;
+		int playerSum = 0;
+		while(cards_player.length > index) {
+			for (int i = 0; i < numberToTake; i++) {
+				if(cards_player[index] > cards_dealer[index]) {
+					playerSum += 10;
+				} else if(cards_player[index] == cards_dealer[index]) {
+					playerSum += 5;
+				}
+			}
+		}
+
+
+		return playerSum;
 	}
 
 	public static void main(String[] args) {
