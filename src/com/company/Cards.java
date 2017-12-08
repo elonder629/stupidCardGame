@@ -14,17 +14,44 @@ public class Cards {
 		int index = 0;
 		int numberToTake = 1;
 		int playerSum = 0;
+		int tempSum = 0;
+
 		while(cards_player.length > index) {
-			for (int i = 0; i < numberToTake; i++) {
-				if(cards_player[index] > cards_dealer[index]) {
+
+			tempSum += cards_player[index];
+
+			//System.out.println(tempSum);
+
+			//System.out.println("honk" + tempSum);
+
+			//System.out.println(tempSum);
+
+			if(tempSum >= cards_dealer[index]) {
+				solution.add(index);
+
+				if (tempSum > cards_dealer[index]) {
+
+					//System.out.println("true, 10");
 					playerSum += 10;
-				} else if(cards_player[index] == cards_dealer[index]) {
+
+				} else if (tempSum == cards_dealer[index]) {
+
+					//System.out.println("true, 5");
 					playerSum += 5;
+
 				}
-				index++;
+				tempSum = 0;
+
 			}
-			solution.add(index);
+			index++;
+
+
 		}
+
+
+		//for (int i = 0; i < cards_dealer.length; i++) {
+
+		//}
 
 
 		return playerSum;

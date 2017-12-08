@@ -17,9 +17,9 @@ public class TryTest  {
         PrintStream out = System.out;
         for (String n : testNames) {
             try {
-                System.out.println("***** TEST FILE " + n + ".in *****");
-                System.out.print(fileData(n + ".in"));
-                System.out.println("***** OUTPUT FOR " + n + ".in *****");
+                //System.out.println("***** TEST FILE " + n + ".in *****");
+                //System.out.print(fileData(n + ".in"));
+                //System.out.println("***** OUTPUT FOR " + n + ".in *****");
                 String logData = tryTest(n);
                 System.setOut(out);
                 System.out.print(logData);
